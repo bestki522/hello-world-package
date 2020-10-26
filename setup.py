@@ -1,7 +1,17 @@
 from setuptools import setup
+from os import path
+
+
+############## Read long description from README.MD
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.MD'), encoding='utf-8') as f:
+    long_description = f.read()
+
+############# Setup package from source
 
 setup(name='hello_world_from_ivan',
-      version='0.0.2',
+      version='0.0.3',
       description='Shows how to use setup.py',
       url='https://www.domain.com',
       author='Ivan Pavlov',
@@ -16,4 +26,6 @@ setup(name='hello_world_from_ivan',
       ],
       keywords='tutorial',
       include_package_data = True,
+      long_description=long_description,
+      long_description_content_type='text/markdown'
 )
