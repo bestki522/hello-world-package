@@ -1,3 +1,5 @@
+MANIFEST.in
+README.MD
 setup.py
 hello_world/__init__.py
 hello_world/greeting.py
